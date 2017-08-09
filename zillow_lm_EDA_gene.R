@@ -59,8 +59,6 @@ sapply(prop_part, function(x) length(unique(x)))
 # look at subset of data without missing data
 names(prop_part)
 
-
-
 ### subset again
 
 part2 = c('parcelid',
