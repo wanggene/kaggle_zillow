@@ -3,6 +3,12 @@
 # step1: EDA on all property
 library(dplyr)
 library(ggplot2)
+library(data.table)
+library(plyr)
+library(dplyr)
+library(kknn)
+
+
 
 # load data
 train = read.csv('./data/train_2016_v2.csv')
@@ -87,6 +93,21 @@ prop_part2[is.na(prop_part2)] = 0
 
 summary(prop_part2)
 save(prop_part2 , file = './data/prop_part_gene_imputed.Rda')
+
+#=========================================================================
+
+
+# after got the cleaned data
+
+df_house = read.csv('/Users/wanggene/Downloads/zillow/housingdata.csv')
+
+df_house <- fread("/Users/wanggene/Downloads/zillow/housingdata.csv")
+
+length(unique(df_house$parcelid)) 
+
+
+
+
 
 
 
